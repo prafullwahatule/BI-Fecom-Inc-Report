@@ -49,7 +49,7 @@ This report provides **actionable insights** to help Fecom Inc:
 
 ---
 
-## 🧑‍💻 Author    https://www.linkedin.com/in/prafullwahatule/
+## 🧑‍💻 Author
 
 **Prafull Wahatule**  
 📧 [prafullwahatule@gmail.com](mailto:prafullwahatule@gmail.com)  
