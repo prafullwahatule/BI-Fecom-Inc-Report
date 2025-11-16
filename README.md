@@ -53,5 +53,6 @@ This report provides **actionable insights** to help Fecom Inc:
 
 **Prafull Wahatule**  
 📧 [prafullwahatule@gmail.com](mailto:prafullwahatule@gmail.com)  
-🔗 [GitHub Profile](https://github.com/prafullwahatule)
-🔗 [LinkdIn Profile](https://www.linkedin.com/in/prafullwahatule/)
+🔗 [GitHub Profile](https://github.com/prafullwahatule)  
+🔗 [LinkdIn Profile](https://www.linkedin.com/in/prafullwahatule/)  
+
