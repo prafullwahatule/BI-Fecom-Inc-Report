@@ -4,6 +4,7 @@ This Power BI project provides a comprehensive **Business Intelligence Report** 
 It helps business users and decision-makers analyze performance trends, track revenue, monitor customer behavior, and evaluate product & seller efficiency.
 
 ---
+---
 
 ## 🗄️ Project Data Tables
 
@@ -128,6 +129,7 @@ This section provides a detailed overview of all the data tables used in the pro
 **Description:** Contains seller details including location and country information, used for seller-level analysis and mapping.
 
 ---
+---
 
 ## 🚀 Power BI Report Planning
 
@@ -174,7 +176,7 @@ The cleaning process ensures duplicates, errors, and unnecessary columns are han
 The table was cleaned by removing duplicates, blank rows, and unnecessary columns, while adding the `Age Group` column for segmentation.  
 The final dataset is **clean, consistent, and ready for analysis**.
 
-***
+---
 
 ### 2. Geolocations Table
 
@@ -192,7 +194,131 @@ Cleaning ensures the dataset contains only **unique, valid, and usable geographi
 **Summary:**  
 This table was cleaned by removing duplicates and the top row to ensure **unique, high-quality geographic data** suitable for mapping, linking to customers/sellers, and regional analysis.
 
+---
 
+### 3. Order_Items Table
+
+The **Order_Items** table contains item-level details of customer orders, including products, sellers, and pricing.  
+Cleaning ensures duplicates are removed and relevant columns are retained, with calculated fields added for analysis.
+
+| Sr. No | Applied Step       | Target Column     | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|------------------|-----------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File     | -               | 112650     | 112650    | 0             | 7              | 7             | 0               |
+| 1      | Remove Errors     | -               | 112650     | 112650    | 0             | 7              | 7             | 0               |
+| 2      | Remove Blank Rows | -               | 112650     | 112650    | 0             | 7              | 7             | 0               |
+| 3      | Remove Duplicates | -               | 112650     | 112650    | 0             | 7              | 7             | 0               |
+| 4      | Remove Duplicates | Order_ID        | 112650     | 98666     | 13984         | 7              | 7             | 0               |
+| 5      | Remove Column     | Order_Item_ID   | 98666      | 98666     | 0             | 7              | 6             | 1               |
+| 6      | Add Column        | Total Item Cost | 98666      | 98666     | 0             | 6              | 7             | 1               |
+
+**Summary:**  
+Duplicates were removed, unnecessary columns were dropped, and a **Total Item Cost** column was added.  
+The table is now clean and ready for **product-level revenue and performance analysis**.
+
+---
+
+### 4. Order_Payments Table
+
+The **Order_Payments** table contains payment-related details for orders, including payment type, value, and installments.  
+Cleaning ensures the table is accurate and includes flags for analysis.
+
+| Sr. No | Applied Step       | Target Column        | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|------------------|-------------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File     | -                 | 103886     | 103886    | 0             | 5              | 5             | 0               |
+| 1      | Remove Errors     | -                 | 103886     | 103886    | 0             | 5              | 5             | 0               |
+| 2      | Remove Blank Rows | -                 | 103886     | 103886    | 0             | 5              | 5             | 0               |
+| 3      | Remove Duplicates | -                 | 103886     | 103886    | 0             | 5              | 5             | 0               |
+| 4      | Remove Column     | Payment_Sequential | 103886     | 103886    | 0             | 5              | 4             | 1               |
+| 5      | Add Column        | Installment Flag  | 103886     | 103886    | 0             | 4              | 5             | 1               |
+
+**Summary:**  
+Unnecessary columns were removed and a **Installment Flag** column was added to facilitate **financial and payment pattern analysis**.
+
+---
+
+### 5. Order_Reviews Table
+
+The **Order_Reviews** table stores customer feedback, ratings, and comments for orders.  
+Cleaning removes invalid or empty entries, drops irrelevant columns, and adds a classification column for analysis.
+
+| Sr. No | Applied Step               | Target Column               | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|---------------------------|----------------------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File             | -                          | 99329      | 99329     | 0             | 7              | 7             | 0               |
+| 1      | Remove Errors             | -                          | 99329      | 99327     | 2             | 7              | 7             | 0               |
+| 2      | Remove Blank Rows         | -                          | 99327      | 99268     | 59            | 7              | 7             | 0               |
+| 3      | Remove Duplicates         | -                          | 99268      | 99268     | 0             | 7              | 7             | 0               |
+| 4      | Remove Empty String       | Order_ID                   | 99268      | 99223     | 45            | 7              | 7             | 0               |
+| 5      | Remove Empty String       | Review_Creation_Date       | 99223      | 99221     | 2             | 7              | 7             | 0               |
+| 6      | Remove Column             | Review_Comment_Message_En  | 99221      | 99221     | 0             | 7              | 6             | 1               |
+| 7      | Remove Column             | Review_Comment_Title_En    | 99221      | 99221     | 0             | 6              | 5             | 1               |
+| 8      | Remove Column             | Review_Answer_Timestamp    | 99221      | 99221     | 0             | 5              | 4             | 1               |
+| 9      | Add Column                | Rating Category            | 99221      | 99221     | 0             | 4              | 5             | 1               |
+
+**Summary:**  
+The table was cleaned by removing errors, blank rows, duplicates, and unnecessary columns.  
+The **Rating Category** column was added to facilitate **customer sentiment and feedback analysis**.
+
+---
+
+### 6. Orders Table
+
+The **Orders** table contains order-level details, including customer, order status, timestamps, and delivery information.  
+Cleaning removes unnecessary columns, handles errors, and calculates delivery time for analysis.
+
+| Sr. No | Applied Step                        | Target Column                  | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|-----------------------------------|-------------------------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File                       | -                             | 99441      | 99441     | 0             | 8              | 8             | 0               |
+| 1      | Remove Errors                       | -                             | 99441      | 99441     | 0             | 8              | 8             | 0               |
+| 2      | Remove Blank Rows                    | -                             | 99441      | 99441     | 0             | 8              | 8             | 0               |
+| 3      | Remove Duplicates                    | -                             | 99441      | 99441     | 0             | 8              | 8             | 0               |
+| 4      | Remove Column                        | Order_Approved_At             | 99441      | 99441     | 0             | 8              | 7             | 1               |
+| 5      | Remove Column                        | Order_Delivered_Carrier_Date  | 99441      | 99441     | 0             | 7              | 6             | 1               |
+| 6      | Add Column                           | Delivery Time (Days)          | 99441      | 99441     | 0             | 6              | 7             | 1               |
+| 7      | Remove Errors                        | Delivery Date After Plot       | 99441      | 96476     | 2965          | 7              | 7             | 0               |
+
+**Summary:**  
+The Orders table was cleaned by removing irrelevant columns and errors, and a **Delivery Time (Days)** column was added for **order fulfillment and delivery analysis**.
+
+---
+
+### 7. Products Table
+
+The **Products** table contains product-level details such as category, dimensions, and weight.  
+Cleaning ensures invalid or zero-value entries are removed, and a **Volume** column is added for analysis.
+
+| Sr. No | Applied Step                     | Target Column         | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|--------------------------------|---------------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File                    | -                   | 32951      | 32951     | 0             | 6              | 6             | 0               |
+| 1      | Remove Errors                    | -                   | 32951      | 32951     | 0             | 6              | 6             | 0               |
+| 2      | Remove Blank Rows                 | -                   | 32951      | 32951     | 0             | 6              | 6             | 0               |
+| 3      | Remove Duplicates                 | -                   | 32951      | 32951     | 0             | 6              | 6             | 0               |
+| 4      | Remove Empty String               | Product_Weight_Gr   | 32951      | 32949     | 2             | 6              | 6             | 0               |
+| 5      | Remove Top 4 Zero Rows            | Product_Weight_Gr   | 32949      | 32945     | 4             | 6              | 6             | 0               |
+| 6      | Add Column                        | Volume (cm³)        | 32945      | 32945     | 0             | 6              | 7             | 1               |
+
+**Summary:**  
+The table was cleaned by removing errors, blank rows, duplicates, and invalid weight entries.  
+A **Volume (cm³)** column was added for **logistics, shipping, and dimensional analysis**.
+
+---
+
+### 8. Sellers_List Table
+
+The **Sellers_List** table contains seller information such as location and country.  
+Cleaning removes unnecessary columns to ensure a concise and accurate dataset.
+
+| Sr. No | Applied Step       | Target Column   | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|------------------|----------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File     | -              | 3095       | 3095      | 0             | 6              | 6             | 0               |
+| 1      | Remove Errors     | -              | 3095       | 3095      | 0             | 6              | 6             | 0               |
+| 2      | Remove Blank Rows | -              | 3095       | 3095      | 0             | 6              | 6             | 0               |
+| 3      | Remove Duplicates | -              | 3095       | 3095      | 0             | 6              | 6             | 0               |
+| 4      | Remove Column     | Country_Code   | 3095       | 3095      | 0             | 6              | 5             | 1               |
+
+**Summary:**  
+The Sellers_List table was cleaned by removing unnecessary columns for **concise seller-level analysis** and accurate reporting.
+
+---
 
 
 
