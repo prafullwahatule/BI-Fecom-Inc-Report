@@ -896,28 +896,34 @@ This ensures customer experience is **transparent, measurable, and actionable fo
 ---
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tools Used
 
-- **Power BI Desktop**  
-- **DAX** (for calculated measures and KPIs)  
-- **Data Modeling & Relationships** (for unified insights)
+- **Microsoft Power BI Desktop** – for building reports and interactive dashboards  
+- **Power Query Editor** – for data cleaning and transformation  
+- **DAX (Data Analysis Expressions)** – for calculating KPIs, percentages, trends  
+- **Excel / CSV Dataset** – source of Amazon sales data
+
+---
+---
+
+## 🙏 Acknowledgement  
+
+Special thanks to the **Retail Sales Sharing Dataset (Open Data)** for providing an excellent real-world dataset.  
+This project was created as part of a **Data Analytics learning journey** using **Power BI**.  
+
+---
+---
+
+## 📎 Author  
+
+**👤 Name:** Prafull Wahatule  
+**📧 Email:** [prafullwahatule@gmail.com](mailto:prafullwahatule@gmail.com)  
+**💻 GitHub:** [https://github.com/prafullwahatule](https://github.com/prafullwahatule)  
+**🔗 LinkedIn:** [https://www.linkedin.com/in/prafullwahatule/](https://www.linkedin.com/in/prafullwahatule/)  
+**🌐 Portfolio:** [https://prafullwahatule.github.io/portfolio/](https://prafullwahatule.github.io/portfolio/)
 
 ---
 
-## 🎯 Purpose
+⭐ *If you found this project helpful, don’t forget to star the repository!* ⭐
 
-This report provides **actionable insights** to help Fecom Inc:  
-- Improve sales & profitability  
-- Monitor business and seller performance  
-- Understand customer patterns  
-- Enable **data-driven decision-making**
-
----
-
-## 🧑‍💻 Author
-
-**Prafull Wahatule**  
-📧 [prafullwahatule@gmail.com](mailto:prafullwahatule@gmail.com)  
-🔗 [GitHub Profile](https://github.com/prafullwahatule)  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/prafullwahatule/)  
 
