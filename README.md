@@ -426,6 +426,43 @@ The `Di_Sellers_List` table contains information about sellers including locatio
 ---
 ---
 
+## 🗺 ER Diagram – Project Database Structure
+
+The **Entity-Relationship (ER) Diagram** provides a visual representation of the database design for the project.  
+It shows how different tables are related to each other and defines the **structure, relationships, and data flow** across the system.
+
+**Diagram:**
+<img width="1637" height="842" alt="Data Modeling" src="https://github.com/user-attachments/assets/202be2a6-0f0a-4e9c-9c51-e63331ced69a" />
+
+### Key Highlights:
+
+- **Customer-Centric Design:**  
+  The `Di_Customer_List` table is linked to the `Orders` table via `Customer ID`, enabling tracking of all orders placed by a customer.
+
+- **Order and Item Relationship:**  
+  The `Orders` table connects to `Order_Items`, capturing item-level details for each order. This allows analysis of individual products within an order.
+
+- **Payment Tracking:**  
+  The `Order_Payments` table is linked to `Orders` via `Order ID` to monitor payment method, installments, and payment amounts for each order.
+
+- **Feedback Management:**  
+  The `Order_Reviews` table is associated with `Orders` through `Order ID` and stores customer ratings and reviews, enabling sentiment and satisfaction analysis.
+
+- **Product and Seller Analysis:**  
+  The `Order_Items` table links to `Di_Products` (via `Product ID`) and `Di_Sellers_List` (via `Seller ID`), providing insights on product performance and seller behavior.
+
+- **Geographic Mapping:**  
+  `Di_Customer_List` and `Di_Sellers_List` link to `Di_Geolocations` via `Postal Code` for geographic visualization and regional analysis.
+
+- **Normalization and Efficiency:**  
+  The ER diagram ensures **minimal redundancy** by separating entities into dedicated tables while maintaining **clear foreign key relationships** for analytical queries.
+
+### Purpose:
+The ER diagram helps developers, analysts, and stakeholders **understand the database structure**, relationships between entities, and enables **efficient querying, reporting, and dashboard creation** in Power BI.
+
+---
+---
+
 ## 🧠 Data Model Overview
 
 **Dimension Tables:**  
