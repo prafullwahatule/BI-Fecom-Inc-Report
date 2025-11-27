@@ -145,11 +145,17 @@ This table summarizes all pages of the Power BI dashboard along with their purpo
 
 ---
 
-## 🧹 Data Cleaning Steps 
+## 🧹 Data Cleaning Steps
 
-**1. Customer_List Table**
-This section outlines the step-by-step data cleaning process applied to the **Customer_List** table.  
-Each step shows the transformation applied, its effect on the number of rows and columns, and the purpose of the step.
+This section documents the **data cleaning process** applied to the project tables.  
+Each table lists the steps applied, their effect on rows and columns, and the purpose of each transformation to ensure **accurate, consistent, and analysis-ready data**.
+
+---
+
+### 1. Customer_List Table
+
+The **Customer_List** table contains detailed information about each customer, including demographics, location, and subscription data.  
+The cleaning process ensures duplicates, errors, and unnecessary columns are handled, with added segmentation via `Age Group`.
 
 | Sr. No | Applied Step           | Target Column          | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
 |--------|----------------------|----------------------|------------|-----------|---------------|----------------|---------------|-----------------|
@@ -163,26 +169,28 @@ Each step shows the transformation applied, its effect on the number of rows and
 | 7      | Remove Column         | Customer_Country_Code| 99441      | 99441     | 0             | 9              | 8             | 1               |
 | 8      | Add Column            | Age Group            | 99441      | 99441     | 0             | 8              | 9             | 1               |
 
-**Description:**  
-The `Customer_List` table underwent multiple cleaning steps including error removal, duplicate elimination, and column management.  
-These steps ensured the data is **accurate, consistent, and ready for analysis**, with added segmentation via the `Age Group` column.  
+**Summary:**  
+The table was cleaned by removing duplicates, blank rows, and unnecessary columns, while adding the `Age Group` column for segmentation.  
+The final dataset is **clean, consistent, and ready for analysis**.
 
-**2. Geolocations Table**
+--
 
-This section outlines the step-by-step data cleaning process applied to the **Geolocations** table.  
-Each step shows the transformation applied, its effect on the number of rows and columns, and the purpose of the step.
+### 2. Geolocations Table
+
+The **Geolocations** table contains geographic information (postal codes, latitude, longitude, city, country) for mapping and regional analysis.  
+Cleaning ensures the dataset contains only **unique, valid, and usable geographic records**.
 
 | Sr. No | Applied Step       | Target Column   | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
 |--------|------------------|----------------|------------|-----------|---------------|----------------|---------------|-----------------|
-| 0      | Load CSV File     | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
-| 1      | Remove Errors     | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
-| 2      | Remove Blank Rows | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
-| 3      | Remove Duplicates | -              | 1000163    | 1686      | 998477        | 5              | 5             | 0               |
-| 4      | Remove Top Row    | -              | 1686       | 1685      | 1             | 5              | 5             | 0               |
+| 0      | Load CSV File     | -              | 1,000,163  | 1,000,163 | 0             | 5              | 5             | 0               |
+| 1      | Remove Errors     | -              | 1,000,163  | 1,000,163 | 0             | 5              | 5             | 0               |
+| 2      | Remove Blank Rows | -              | 1,000,163  | 1,000,163 | 0             | 5              | 5             | 0               |
+| 3      | Remove Duplicates | -              | 1,000,163  | 1,686     | 998,477       | 5              | 5             | 0               |
+| 4      | Remove Top Row    | -              | 1,686      | 1,685     | 1             | 5              | 5             | 0               |
 
-**Description:**  
-The `Geolocations` table underwent error removal, duplicate elimination, and top-row removal to ensure **unique and clean geographic records**.  
-This prepares the table for accurate mapping, regional analysis, and linking with customer and seller locations.  
+**Summary:**  
+This table was cleaned by removing duplicates and the top row to ensure **unique, high-quality geographic data** suitable for mapping, linking to customers/sellers, and regional analysis.
+
 
 
 
