@@ -319,8 +319,112 @@ Cleaning removes unnecessary columns to ensure a concise and accurate dataset.
 The Sellers_List table was cleaned by removing unnecessary columns for **concise seller-level analysis** and accurate reporting.
 
 ---
+---
 
+## 🗂 Finalized Columns – Project Tables
 
+This section lists the **final columns** in each table after data cleaning, transformation, and addition of calculated fields.  
+These columns are used for reporting, analysis, and visualization in the project.
+
+---
+
+### 1. Di_Customer_List
+The `Di_Customer_List` table contains customer-related information including demographics, location, and subscription details.  
+**Final Columns:**
+- Customer ID  
+- Subscription Date  
+- First Order Date  
+- City  
+- Country  
+- Postal Code  
+- Age  
+- Gender  
+- Age Group  
+
+---
+
+### 2. Di_Geolocations
+The `Di_Geolocations` table stores geographic information for mapping and regional analysis.  
+**Final Columns:**
+- Postal Code  
+- Latitude  
+- Longitude  
+- City  
+- Country  
+
+---
+
+### 3. Order_Items
+The `Order_Items` table contains item-level details for each order, including pricing and logistics.  
+**Final Columns:**
+- Order ID  
+- Product ID  
+- Seller ID  
+- Item Price  
+- Shipping Cost  
+- Shipping Deadline  
+- Total Item Cost  
+
+---
+
+### 4. Order_Payments
+The `Order_Payments` table captures payment information for orders.  
+**Final Columns:**
+- Order ID  
+- Payment Method  
+- Installments  
+- Payment Amount  
+- Installment Flag  
+
+---
+
+### 5. Order_Reviews
+The `Order_Reviews` table stores customer feedback and ratings for each order.  
+**Final Columns:**
+- Review ID  
+- Order ID  
+- Rating  
+- Review Date  
+- Rating Category  
+
+---
+
+### 6. Orders
+The `Orders` table contains order-level information for tracking order status and delivery.  
+**Final Columns:**
+- Order ID  
+- Customer ID  
+- Status  
+- Order Date  
+- Delivery Date  
+- Estimated Delivery Date  
+
+---
+
+### 7. Di_Products
+The `Di_Products` table stores product-specific information for analysis of category, weight, and dimensions.  
+**Final Columns:**
+- Product ID  
+- Category  
+- Weight (g)  
+- Length (cm)  
+- Height (cm)  
+- Width (cm)
+- Volume (cm²)
+
+---
+
+### 8. Di_Sellers_List
+The `Di_Sellers_List` table contains information about sellers including location details for geographic analysis.  
+**Final Columns:**
+- Seller ID  
+- Seller Name  
+- City  
+- Country  
+- Postal Code  
+
+---
+---
 
 ## 🧠 Data Model Overview
 
