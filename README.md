@@ -9,7 +9,6 @@ It helps business users and decision-makers analyze performance trends, track re
 
 This section provides a detailed overview of all the data tables used in the project, along with column names and their purpose.  
 
----
 
 ### 1. Di_Customer_List
 
@@ -26,9 +25,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 9      | Age                | Customer age                              |
 | 10     | Gender             | Customer gender                           |
 
-**Description:** This table contains detailed information about each customer, including demographics, location, and subscription details. It is mainly used for customer-level analysis and segmentation.
+**Description:** This table contains detailed information about each customer, including demographics, location, and subscription details. It is mainly used for customer-level analysis and segmentation.  
 
----
 
 ### 2. Di_Geolocations
 
@@ -40,9 +38,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 4      | Geolocation_City | City corresponding to postal code                     |
 | 5      | Geo_Country      | Country name for comparison and filtering            |
 
-**Description:** Contains geographic coordinates and location information used for mapping, regional analysis, and visualizing customer/seller distribution.
+**Description:** Contains geographic coordinates and location information used for mapping, regional analysis, and visualizing customer/seller distribution.  
 
----
 
 ### 3. Order_Items
 
@@ -56,9 +53,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 6      | Price                | Selling price of the product                                  |
 | 7      | Freight_Value        | Shipping cost                                                |
 
-**Description:** Contains item-level details of all orders, linking products to sellers and tracking pricing and shipping costs.
+**Description:** Contains item-level details of all orders, linking products to sellers and tracking pricing and shipping costs.  
 
----
 
 ### 4. Order_Payments
 
@@ -70,9 +66,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 4      | Payment_Installments | Number of installments selected                               |
 | 5      | Payment_Value       | Total payment made                                           |
 
-**Description:** Tracks payment details for each order, including method, installments, and payment amounts, used for revenue analysis.
+**Description:** Tracks payment details for each order, including method, installments, and payment amounts, used for revenue analysis.  
 
----
 
 ### 5. Order_Reviews
 
@@ -86,9 +81,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 6      | Review_Creation_Date          | Date of review submission                                  |
 | 7      | Review_Answer_Timestamp       | Timestamp of seller response                                |
 
-**Description:** Stores customer feedback and ratings for orders. Used to analyze satisfaction, trends, and seller response times.
+**Description:** Stores customer feedback and ratings for orders. Used to analyze satisfaction, trends, and seller response times.  
 
----
 
 ### 6. Orders
 
@@ -103,9 +97,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 7      | Order_Delivered_Customer_Date | Date & time customer received the product                  |
 | 8      | Order_Estimated_Delivery_Date | Expected delivery date                                      |
 
-**Description:** Contains general order-level information for tracking the lifecycle, status, and timestamps of each order.
+**Description:** Contains general order-level information for tracking the lifecycle, status, and timestamps of each order.  
 
----
 
 ### 7. Di_Products
 
@@ -118,9 +111,8 @@ This section provides a detailed overview of all the data tables used in the pro
 | 5      | Product_Height_Cm     | Height in centimeters                                      |
 | 6      | Product_Width_Cm      | Width in centimeters                                       |
 
-**Description:** Stores product information including category, weight, and dimensions, used for product-level analysis and logistics calculations.
+**Description:** Stores product information including category, weight, and dimensions, used for product-level analysis and logistics calculations.  
 
----
 
 ### 8. Di_Sellers_List
 
@@ -152,6 +144,48 @@ This table summarizes all pages of the Power BI dashboard along with their purpo
 | 7      | ⭐ Feedback         | Analyzes customer ratings and feedback, including average rating and sentiment|
 
 ---
+
+## 🧹 Data Cleaning Steps 
+
+**1. Customer_List Table**
+This section outlines the step-by-step data cleaning process applied to the **Customer_List** table.  
+Each step shows the transformation applied, its effect on the number of rows and columns, and the purpose of the step.
+
+| Sr. No | Applied Step           | Target Column          | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|----------------------|----------------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File         | -                    | 102727     | 102727    | 0             | 10             | 10            | 0               |
+| 1      | Remove Errors         | -                    | 102727     | 102727    | 0             | 10             | 10            | 0               |
+| 2      | Remove Blank Rows     | -                    | 102727     | 102727    | 0             | 10             | 10            | 0               |
+| 3      | Remove Duplicates     | -                    | 102727     | 102727    | 0             | 10             | 10            | 0               |
+| 4      | Remove Duplicates     | Customer_Trx_ID      | 102727     | 99442     | 3285          | 10             | 10            | 0               |
+| 5      | Remove Blank Rows     | Customer_Trx_ID      | 99442      | 99441     | 1             | 10             | 10            | 0               |
+| 6      | Remove Column         | Subscriber_ID        | 99441      | 99441     | 0             | 10             | 9             | 1               |
+| 7      | Remove Column         | Customer_Country_Code| 99441      | 99441     | 0             | 9              | 8             | 1               |
+| 8      | Add Column            | Age Group            | 99441      | 99441     | 0             | 8              | 9             | 1               |
+
+**Description:**  
+The `Customer_List` table underwent multiple cleaning steps including error removal, duplicate elimination, and column management.  
+These steps ensured the data is **accurate, consistent, and ready for analysis**, with added segmentation via the `Age Group` column.  
+
+**2. Geolocations Table**
+
+This section outlines the step-by-step data cleaning process applied to the **Geolocations** table.  
+Each step shows the transformation applied, its effect on the number of rows and columns, and the purpose of the step.
+
+| Sr. No | Applied Step       | Target Column   | Rows Before | Rows After | Effect (Rows) | Columns Before | Columns After | Effect (Columns) |
+|--------|------------------|----------------|------------|-----------|---------------|----------------|---------------|-----------------|
+| 0      | Load CSV File     | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
+| 1      | Remove Errors     | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
+| 2      | Remove Blank Rows | -              | 1000163    | 1000163   | 0             | 5              | 5             | 0               |
+| 3      | Remove Duplicates | -              | 1000163    | 1686      | 998477        | 5              | 5             | 0               |
+| 4      | Remove Top Row    | -              | 1686       | 1685      | 1             | 5              | 5             | 0               |
+
+**Description:**  
+The `Geolocations` table underwent error removal, duplicate elimination, and top-row removal to ensure **unique and clean geographic records**.  
+This prepares the table for accurate mapping, regional analysis, and linking with customer and seller locations.  
+
+
+
 
 ## 🧠 Data Model Overview
 
