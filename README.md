@@ -1,7 +1,74 @@
-# 📊 BI Fecom Inc Report
+# 📊 Fecom Inc – Power BI Business Intelligence Report
 
-This Power BI project provides a comprehensive **Business Intelligence Report** for **Fecom Inc**, covering **sales, customers, products, sellers, payments, reviews,** and **geographic insights**.  
-It helps business users and decision-makers analyze performance trends, track revenue, monitor customer behavior, and evaluate product & seller efficiency.
+This **Power BI project** delivers a comprehensive **Business Intelligence (BI) Report** for **Fecom Inc**, consolidating insights across **sales, customers, products, sellers, payments, reviews,** and **geographic data**.  
+
+The dashboard empowers business users and decision-makers to **analyze trends, track revenue, monitor customer behavior, evaluate seller and product performance, and make data-driven strategic decisions**.
+
+---
+
+## 📌 Problem Statement
+
+In a modern e-commerce marketplace, companies face multiple challenges:
+
+- **Fragmented or messy data** across orders, customers, sellers, and products.  
+- Difficulty in **tracking customer behavior, product performance, and seller efficiency**.  
+- Limited visibility into **revenue trends, payments, and installment patterns**.  
+- Challenges in **analyzing customer feedback** to improve products, services, and delivery experience.  
+
+This project solves these issues by creating a **clean, structured dataset** integrated into a **relational database** and a **Power BI dashboard**, enabling actionable business insights.
+
+---
+
+## 📝 Project Overview
+
+The **Fecom Inc BI Report** is a **data-driven analytical tool** that consolidates multiple datasets and visualizes key business metrics interactively.  
+
+Key highlights include:
+
+- **Data Wrangling:**  
+  Cleaning, transforming, and enhancing datasets by removing irrelevant columns and adding analytical fields such as `Age Group`, `Total Item Cost`, `Installment Flag`, and `Rating Category`.
+
+- **Database Design & ER Diagram:**  
+  A relational model connecting **customers, orders, products, sellers, payments, and reviews** to ensure data integrity and support comprehensive analytics.
+
+- **Dashboards & Insights:**  
+  Power BI dashboards provide insights across several domains:
+
+  - **Overview:** Total Orders, Revenue, Customers, Sellers, Average Rating, On-Time Delivery %.  
+  - **Products:** Product catalog performance, shipping costs, delivery times, top and bottom performers.  
+  - **Vendors:** Seller revenue, top sellers, quantity sold, geographic distribution, category-wise performance.  
+  - **Customers:** Active customers, demographic insights, top revenue-generating customers, city-wise distribution.  
+  - **Revenue:** Total revenue, revenue per order, payment method analysis, installment tracking.  
+  - **Feedback:** Customer ratings, review count, positive/negative feedback analysis, category-wise sentiment.
+
+- **Geospatial Analysis:**  
+  Linking customers and sellers with geographic coordinates to visualize regional performance and market penetration.
+
+---
+
+## 🎯 Project Objectives
+
+1. **Clean & Prepare Data:**  
+   Ensure datasets are accurate, consistent, and ready for analysis by removing duplicates and irrelevant fields.
+
+2. **Integrate Multiple Tables:**  
+   Build a relational database connecting `Customers`, `Orders`, `Order_Items`, `Products`, `Sellers`, `Payments`, and `Reviews`.
+
+3. **Deliver Actionable Insights:**  
+   Track KPIs, trends, and patterns to monitor business performance and operational efficiency.
+
+4. **Improve Customer Understanding:**  
+   Analyze behavior, demographics, and feedback to enhance customer satisfaction and retention.
+
+5. **Evaluate Products & Sellers:**  
+   Identify top-performing products and sellers, underperforming items, and potential growth opportunities.
+
+6. **Visualize Data Professionally:**  
+   Create interactive dashboards for **easy, professional, and insightful visualization** of all key metrics.
+
+7. **Support Strategic Decision-Making:**  
+   Enable forecasting, trend analysis, and operational planning to optimize marketplace growth.
+
 
 ---
 ---
@@ -537,17 +604,296 @@ This ensures the final dataset is **clean**, **optimized**, and **analysis-ready
 ---
 
 
-## 🧠 Data Model Overview
+## 🏠 Home Page – Overview & Navigation
 
-**Dimension Tables:**  
-`Products`, `Sellers_List`, `Customer_List_clean`  
+The **Home Page** serves as the **introductory interface** for the project.  
+It provides users with a **quick overview of the platform**, brand identity, and access to all other sections through clear navigation.
 
-**Fact Tables:**  
-`Orders`, `Order_Items`, `Order_Payments`, `Order_Reviews`  
+**Screenshot:**  
+<img width="1409" height="794" alt="Home" src="https://github.com/user-attachments/assets/ae2cd59f-747f-4c40-983d-492555517f90" />
 
-**Support Table:**  
-`Geolocations`
 
+### 🔑 Key Features
+
+- **Project Branding:**  
+  Displays the project **name and logo**, reinforcing brand identity and professional appearance.
+
+- **Navigation Buttons:**  
+  Provides **easy access** to all key pages such as Overview, Product, Vendor, Customer, Revenue, Feedback, and Reports.  
+
+- **User-Friendly Interface:**  
+  Designed for **intuitive interaction**, ensuring users can quickly find desired sections without confusion.
+
+
+### 🎯 Summary
+
+The **Home Page** acts as the **central hub** for the dashboard, helping users:  
+
+- Recognize the project visually through logo and branding  
+- Navigate seamlessly to all pages and modules  
+- Understand the purpose and scope of the platform at a glance  
+
+This ensures the first impression is **professional, clean, and easy to use**.
+
+---
+
+## 📊 Overview – KPI & Chart Insights
+
+The **Overview Page** provides a **high-level summary of the platform's performance**, combining KPIs and visualizations to enable quick insights into orders, revenue, customers, sellers, and operational efficiency.
+
+**Screenshot:**  
+<img width="1407" height="789" alt="Overview" src="https://github.com/user-attachments/assets/7c364c6f-662b-4bf0-8190-06bdc4fdca4d" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name                | Insight |
+|--------|------------------------|---------|
+| 1      | Total Orders Completed  | Shows how many orders were successfully delivered. A higher number reflects strong customer demand and good overall marketplace activity. |
+| 2      | Total Revenue           | Indicates the total money earned from all orders. Helps measure business growth, profitability, and monthly/seasonal performance. |
+| 3      | Total Customers         | Represents how many unique customers purchased from the platform. An increasing count shows successful customer acquisition and market expansion. |
+| 4      | Total Sellers           | Shows the number of active sellers. More sellers indicate a wider product range and a healthier marketplace ecosystem. |
+| 5      | Average Rating          | Reflects overall customer satisfaction based on product and delivery reviews. A higher rating indicates better product quality and service experience. |
+| 6      | On-Time Delivery %      | Shows the percentage of orders delivered on or before the estimated delivery date. Higher values indicate efficient logistics and improved customer experience. |
+
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                        | Columns / Measures                         | Insight |
+|--------|----------------------------------|-------------------------------------------|---------|
+| 1      | Monthly Completed Orders Trend    | Order Date, Total Orders Completed (KPI) | Shows monthly variation of successfully delivered orders to identify high-demand and low-demand periods. |
+| 2      | Top 10 Products by Revenue        | Category, Total Revenue                    | Highlights highest revenue-generating product categories and identifies top-selling items. |
+| 3      | Total Customers by Gender         | Gender, Total Customers                    | Displays customer distribution based on gender, providing insight into the dominant customer segment. |
+| 4      | Total Revenue by Quarter          | Order Date, Total Revenue                  | Shows quarterly revenue performance to identify seasonal patterns, growth cycles, and overall business health. |
+
+
+### 🎯 Summary
+
+The **Overview Page** allows stakeholders to:
+
+- Quickly monitor **business performance** through KPIs  
+- Identify **trends** in orders, revenue, and customer activity  
+- Evaluate **customer satisfaction** and **delivery efficiency**  
+- Highlight **top-performing products and categories**  
+
+It serves as the **primary dashboard for strategic decisions and operational monitoring**.
+
+---
+
+## 🛒 Products – KPI & Chart Insights
+
+The **Products Page** provides a **detailed view of product performance**, combining KPIs and visualizations to understand inventory, product popularity, shipping efficiency, and revenue generation.
+
+**Screenshot:**  
+<img width="1408" height="791" alt="Products" src="https://github.com/user-attachments/assets/c3b0f98a-31a1-41ef-9a64-15b58942abab" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name             | Insight |
+|--------|--------------------|---------|
+| 1      | Total Products       | Shows the total number of products in the catalog. Helps track catalog growth and overall marketplace inventory. |
+| 2      | Active Products      | Indicates how many products have been ordered at least once. Helps identify products that are engaging customers. |
+| 3      | Avg Shipping Cost    | Shows the average shipping cost per product. Helps monitor logistics expenses and manage delivery costs. |
+| 4      | Avg Delivery Time    | Displays the average delivery time per product. Helps evaluate delivery efficiency and customer satisfaction. |
+
+  
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                              | Columns / Measures                     | Insight |
+|--------|----------------------------------------|---------------------------------------|---------|
+| 1      | Monthly Order Trend (Line Chart)       | Order Date, COUNT(Orders[OrderID])    | Displays overall order volume trend, helping identify monthly spikes or drops in customer purchasing activity. |
+| 2      | Top 5 Products by Volume (Bar Chart)   | Category, Volume (cm²)                | Highlights the largest products by physical size or dimensions. Useful for inventory and logistics planning. |
+| 3      | Top 5 Products by Quantity Sold (Bar)  | Category, COUNT(Orders[OrderID])      | Shows the most popular products based on the number of orders. Helps identify high-demand products. |
+| 4      | Bottom 5 Products by Revenue (Bar)     | Category, Total Revenue                | Identifies underperforming products generating the least revenue. Helps make decisions on discounts, marketing, or discontinuation. |
+| 5      | Total Orders by Status (Area Chart)    | Status, COUNT(Orders[OrderID])        | Shows the distribution of orders by status (Delivered, Pending, Canceled). Helps monitor fulfillment performance. |
+
+
+
+### 🎯 Summary
+
+The **Products Page** helps stakeholders:
+
+- Track **overall product catalog** and active items  
+- Evaluate **logistics efficiency** via shipping cost and delivery time  
+- Identify **popular and underperforming products**  
+- Make informed decisions for **inventory management, marketing, and promotions**  
+
+This page ensures **product-level insights** to optimize marketplace operations and customer satisfaction.
+
+
+---
+
+## 🏪 Vendor / Sellers – KPI & Chart Insights
+
+The **Vendor Page** provides insights into **seller performance**, revenue generation, and geographical presence, helping stakeholders understand which sellers contribute most to the marketplace.
+
+**Screenshot:**  
+<img width="1407" height="792" alt="Vendor" src="https://github.com/user-attachments/assets/9c201acf-5daa-4c61-b36c-64a1669e4385" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name          | Insight |
+|--------|-----------------|---------|
+| 1      | Top Seller        | Highlights the seller generating the highest total revenue, identifying the strongest performer. |
+| 2      | Total Sellers     | Shows how many sellers are registered on the platform. |
+| 3      | Active Sellers    | Shows the number of sellers who made at least one sale during the selected period. |
+| 4      | Seller Revenue    | Displays total revenue generated by all sellers combined. |
+
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                       | Columns / Measures                       | Insight |
+|--------|---------------------------------|-----------------------------------------|---------|
+| 1      | Monthly Seller Revenue Trend     | Order Date, Seller Revenue (KPI)        | Tracks total seller revenue month-wise to identify growth patterns and high-performing periods. |
+| 2      | Top 5 Sellers by Revenue         | Seller ID, Seller Revenue                | Shows which sellers generate the highest revenue, helping identify top contributors. |
+| 3      | Top 5 Sellers by Sold Quantity   | Seller ID, COUNT(Order ID)               | Identifies sellers with the highest order count, highlighting high-volume sellers. |
+| 4      | Geo Distribution of Sellers      | Country, COUNT(Seller ID)                | Shows seller presence by geography, useful for understanding market penetration. |
+| 5      | Seller Category Performance      | Seller → Product Category → Revenue      | Shows revenue breakdown by seller and product category, helping analyze which categories perform best for each seller. |
+
+
+### 🎯 Summary
+
+The **Vendor Page** helps stakeholders:
+
+- Identify **top-performing sellers** by revenue and order volume  
+- Monitor **seller activity and engagement**  
+- Analyze **geographical distribution** for strategic expansion  
+- Evaluate **product category performance** per seller  
+
+This page ensures **comprehensive seller analytics** to improve marketplace efficiency and support business growth.
+
+---
+
+## 👥 Customer – KPI & Chart Insights
+
+The **Customer Page** provides detailed insights into **customer behavior, engagement, and demographics**.  
+It helps stakeholders understand **active customers, retention trends, and revenue contribution**.
+
+**Screenshot:**  
+<img width="1408" height="788" alt="Customers" src="https://github.com/user-attachments/assets/987153f1-4128-46b3-b3cd-6aec5ae9a4eb" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name                  | Insight |
+|--------|--------------------------|---------|
+| 1      | Active Customers (Last 30 Days) | Shows how many unique customers placed at least one order in the past 30 days. Measures engagement, activity level, and short-term retention. |
+| 2      | Total Customers           | Represents the overall number of unique registered customers, reflecting the size of the customer base and long-term acquisition success. |
+| 3      | Avg Age of Customers      | Displays the average age of all customers, helping identify the dominant age group and support customer segmentation analysis. |
+| 4      | Avg Customer Rating       | Shows the average product/service rating given by customers. A higher rating indicates better service quality and satisfaction. |
+
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                        | Columns / Measures                    | Insight |
+|--------|----------------------------------|--------------------------------------|---------|
+| 1      | Monthly Active Customers (Line Chart) | Order Date, Active Customer (30 Days) KPI | Shows how customer engagement changes month by month by tracking customers who placed orders recently. Identifies growth, seasonal trends, and high-activity months. |
+| 2      | Age Group Distribution (Column Chart) | Age Group, COUNT(Customer ID)        | Displays the number of customers in each age group, helping understand demographics and dominant segments. |
+| 3      | Top 5 Customers by Revenue (Bar Chart) | Customer ID, Total Revenue           | Highlights the top revenue-generating customers, useful for identifying high-value customers and planning retention strategies. |
+| 4      | Top 10 Cities by Customers (Bar Chart) | City, COUNT(Customer ID)             | Shows which cities have the highest customer count, helping target regional campaigns. |
+| 5      | Total Orders by Subscription Month (Line Chart) | Subscription Month, COUNT(Order ID) | Displays order activity by customers based on subscription month, helping identify whether early or recent subscribers are more active. |
+
+
+### 🎯 Summary
+
+The **Customer Page** helps stakeholders:
+
+- Track **recently active customers** and engagement trends  
+- Understand **customer demographics** and age group distribution  
+- Identify **high-value customers** for targeted retention efforts  
+- Analyze **geographical customer presence** for marketing strategies  
+
+This ensures a comprehensive understanding of customer behavior, supporting **growth, engagement, and retention initiatives**.
+
+---
+
+## 💰 Revenue – KPI & Chart Insights
+
+The **Revenue Page** provides a clear view of **financial performance, payment behavior, and revenue trends**.  
+It helps stakeholders monitor **earnings, average revenue per order, and installment payment patterns**.
+
+**Screenshot:**  
+<img width="1406" height="786" alt="Revenue" src="https://github.com/user-attachments/assets/bb1ed935-6d01-483f-ba9c-e8b0dc6f0076" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name                 | Insight |
+|--------|--------------------------|---------|
+| 1      | Total Revenue            | Represents the total earnings generated from all customer payments, indicating the overall financial performance of the business. |
+| 2      | Avg Revenue Per Order    | Shows the average revenue earned for each order, helping measure how much value each customer order contributes. |
+| 3      | Avg Payment Amount       | Reflects the average value of individual payment transactions, useful when customers make multiple or installment-based payments. |
+| 4      | Installment Payment %    | Measures the percentage of orders paid through installments, helping understand payment behavior and cash-flow patterns. |
+
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                         | Columns / Measures                | Insight |
+|--------|-----------------------------------|----------------------------------|---------|
+| 1      | Monthly Total Revenue (Line Chart) | Order Date, Total Revenue (KPI) | Tracks monthly revenue trends to identify growth, seasonal patterns, or drops in sales. |
+| 2      | Installments vs Non-installments (Donut Chart) | Installment Flag, Total Revenue | Shows how much revenue comes from installment vs non-installment payments. |
+| 3      | Payment Method Split (Bar Chart)   | Payment Method, Total Revenue    | Highlights which payment methods contribute the most revenue. |
+| 4      | Avg Revenue Per Order by Quarter   | Order Date, Avg Revenue Per Order (KPI) | Reveals how average earnings per order change across quarters. |
+
+
+
+### 🎯 Summary
+
+The **Revenue Page** helps stakeholders:
+
+- Monitor **total earnings and revenue trends**  
+- Understand **average revenue per order** and payment patterns  
+- Analyze **installment-based transactions** and cash-flow impact  
+- Evaluate **payment method contribution** for strategic decision-making  
+
+This ensures financial performance is **transparent, actionable, and ready for analysis and reporting**.
+
+---
+
+## 📝 Feedback – KPI & Chart Insights
+
+The **Feedback Page** provides insights into **customer satisfaction, review trends, and engagement levels**.  
+It helps stakeholders understand **overall satisfaction, positive/negative feedback ratios, and product/service performance from the customer’s perspective**.
+
+**Screenshot:**  
+<img width="1406" height="788" alt="Feedback" src="https://github.com/user-attachments/assets/b9ab1edd-6995-4e05-96cb-bb4fbd35696e" />
+
+
+### 🔑 Key KPIs
+
+| Sr. No | KPI Name                     | Insight |
+|--------|------------------------------|---------|
+| 1      | Average Rating               | Indicates overall customer satisfaction based on the average review scores received. |
+| 2      | Total Reviews                | Shows the total number of customer reviews submitted, helping understand engagement and feedback volume. |
+| 3      | % Positive Reviews (Rating 4–5) | Represents the percentage of highly satisfied customers who rated the product or service positively. |
+| 4      | % Negative Reviews (Rating 1–2) | Highlights the percentage of unhappy customers, helping identify issues in product quality, delivery, or service. |
+
+
+### 📈 Charts & Visual Insights
+
+| Sr. No | Chart Name                       | Columns / Measures                 | Insight |
+|--------|---------------------------------|----------------------------------|---------|
+| 1      | Monthly Avg Rating (Line Chart) | Review Date, Average Rating (KPI) | Shows how customer satisfaction changes month-by-month by tracking average rating trends over time. |
+| 2      | Rating Distribution (Donut Chart) | Rating Category, COUNT(Review ID) | Displays how ratings are spread across categories (1–5), helping identify whether customers are mostly happy or unhappy. |
+| 3      | Top 10 Categories by Rating      | Category, COUNT(Review ID)        | Highlights which product categories receive the most reviews, helping identify customers' most discussed items. |
+| 4      | Feedback in Detail (Matrix/Table)| Customer ID, Category, Volume (cm³), Avg Rating, Revenue, Status | Provides a detailed view of each customer’s feedback along with product category, size, rating, and revenue data. |
+
+### 🎯 Summary
+
+The **Feedback Page** allows stakeholders to:
+
+- Monitor **average ratings** and customer satisfaction trends  
+- Analyze **positive vs negative feedback** to detect pain points  
+- Identify **top product categories based on reviews**  
+- Access **detailed customer feedback** for deeper insights into product and service performance  
+
+This ensures customer experience is **transparent, measurable, and actionable for business improvements**.
+
+
+---
 ---
 
 ## 🛠️ Technologies Used
