@@ -174,7 +174,7 @@ The cleaning process ensures duplicates, errors, and unnecessary columns are han
 The table was cleaned by removing duplicates, blank rows, and unnecessary columns, while adding the `Age Group` column for segmentation.  
 The final dataset is **clean, consistent, and ready for analysis**.
 
---
+***
 
 ### 2. Geolocations Table
 
