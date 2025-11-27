@@ -5,16 +5,19 @@ It helps business users and decision-makers analyze performance trends, track re
 
 ---
 
-## 🚀 Project Features / Pages
+## 🚀 Power BI Report Planning
 
-- 🏠 **Home / Intro:** Introduction page with project name, logo, and brief description.  
-- 📈 **Overview / Dashboard:** High-level KPIs like Total Orders, Revenue, Average Rating, and trends.  
-- 📦 **Products / Sales Analysis:** Insights into top-selling products and category-wise sales.  
-- 🧾 **Sellers / Vendor Performance:** Seller performance analysis and revenue ranking.  
-- 👥 **Customer Insights:** Customer behavior, new vs returning users, average order value, and location insights.  
-- 💳 **Payments / Revenue Analysis:** Revenue trends, payment methods, refunds, and monthly breakdowns.  
-- ⭐ **Reviews / Feedback:** Customer ratings and sentiment analysis.  
-- 🌍 **Geo Insights:** Map-based visualizations of orders, customers, and sellers.
+This table summarizes all pages of the Power BI dashboard along with their purpose.  
+
+| Page No | Page Name         | Purpose                                                                 |
+|--------|------------------|-------------------------------------------------------------------------|
+| 1      | 🏠 Home             | Serves as the entry page with project name, logo, and navigation buttons|
+| 2      | 📈 Overview         | Provides high-level metrics and trends: Total Orders, Revenue, Avg. Rating|
+| 3      | 📦 Products         | Analyzes product performance: top products and category-wise sales      |
+| 4      | 🧾 Sellers / Vendors| Evaluates seller performance: revenue, sales trends, top sellers        |
+| 5      | 👥 Customers        | Understands customer behavior: location, avg order value, demographics  |
+| 6      | 💳 Revenue          | Tracks revenue, payment methods, refunds, and monthly financial trends  |
+| 7      | ⭐ Feedback         | Analyzes customer ratings and feedback, including average rating and sentiment|
 
 ---
 
