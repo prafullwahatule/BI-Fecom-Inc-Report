@@ -463,6 +463,80 @@ The ER diagram helps developers, analysts, and stakeholders **understand the dat
 ---
 ---
 
+## 🧰 Data Wrangling
+
+The Data Wrangling phase focused on **cleaning**, **transforming**, and **enhancing** the datasets to ensure accuracy, consistency, and analytical usefulness.  
+Unnecessary fields were removed, and meaningful calculated columns were added to support deeper insights and reporting.
+
+---
+
+## 🔥 1. Columns Removed
+
+To reduce noise and keep only meaningful information, the following columns were removed from each table:
+
+### **🗂 Customer_List**
+- Subscriber_ID  
+- Customer_Country_Code  
+
+### **📦 Order_Items**
+- Order_Item_ID  
+
+### **💳 Order_Payments**
+- Payment_Sequential  
+
+### **⭐ Order_Reviews**
+- Review_Comment_Message_En  
+- Review_Comment_Title_En  
+- Review_Answer_Timestamp  
+
+### **📜 Orders**
+- Order_Approved_At  
+- Order_Delivered_Carrier_Date  
+
+### **🏪 Sellers_List**
+- Country_Code  
+
+These fields were removed because they were **irrelevant**, **duplicate**, or **not required** for business analysis.
+
+---
+
+## 🌱 2. Columns Added
+
+New calculated fields were created to improve segmentation, cost calculation, and rating analysis.
+
+### **🗂 Customer_List**
+- **Age Group** → Categorizes customers into ranges (18–25, 26–35, 36–45, etc.) for demographic insights.
+
+### **📦 Order_Items**
+- **Total Item Cost** → Calculated as *(Item Price + Shipping Cost)* to determine final cost per item.
+
+### **💳 Order_Payments**
+- **Installment Flag** → Indicates whether the payment was made in **installments** or **full**.
+
+### **⭐ Order_Reviews**
+- **Rating Category** → Converts numeric rating into descriptive categories:
+  - Poor  
+  - Average  
+  - Good  
+  - Excellent  
+
+---
+
+## 🎯 Summary
+
+The Data Wrangling process helped in:
+
+- Removing irrelevant or duplicate fields  
+- Improving dataset clarity and usability  
+- Creating powerful analytical columns  
+- Preparing the data for modeling, dashboards, and insights  
+
+This ensures the final dataset is **clean**, **optimized**, and **analysis-ready**.
+
+---
+---
+
+
 ## 🧠 Data Model Overview
 
 **Dimension Tables:**  
