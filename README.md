@@ -150,7 +150,8 @@ This table summarizes all pages of the Power BI dashboard along with their purpo
 This section documents the **data cleaning process** applied to the project tables.  
 Each table lists the steps applied, their effect on rows and columns, and the purpose of each transformation to ensure **accurate, consistent, and analysis-ready data**.
 
----
+
+
 
 ### 1. Customer_List Table
 
